@@ -71,6 +71,7 @@
 
     <!--用于发送数据，表达出语义，可读性  lesson1.html?username=&password=-->
     <form method="get" action="">
+        <!--实现输入提示框，且焦点移除和获取焦点的文字不一样，有个bug如果输入提示的文字还是会消失-->
         <p>username: <input type="text" name="username" value="请输入用户名"
             style="color:#999"
             onfocus="if(this.value=='请输入用户名'){ this.value=''; 
@@ -80,7 +81,7 @@
         <p>password: <input type="password" name="password"></p>
         <p><input type="submit"></p>
     </form>
-    <!--单选框-->
+    <!--单选框，所有的name一样，则是单选框-->
     <input type="radio" name="star"> 单选框1
     <input type="radio" name="star"> 单选框2
     <input type="radio" name="star"> 单选框3
