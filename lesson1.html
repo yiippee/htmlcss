@@ -1,0 +1,89 @@
+<html lang="zh"> <!--告诉搜索引擎爬虫，我们的网站是关于什么内容的-->
+<head>
+    <meta charset="utf-8">
+    <title>淘宝网，我喜欢</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            float: left; 
+            margin: 0 10px;
+            color:#f40;
+            font-weight: bold;
+            font-size: 14px;
+            height: 25px;
+            line-height: 25px;
+            padding:0 5px;
+        }
+        li:hover{
+            border-radius: 15px;
+            background-color: #f40;
+            color:#fff;
+        }
+        input {
+            border: 1px solid #999
+        }
+    </style>
+</head>
+<body>
+    <h1> 标题 </h1>
+    Life is shit!!!美好     生活。
+    <del style="color:red">$100</del>
+    <address>斜体</address>
+    <!--空格和回车，是文本分隔符，与普通意义的不一样。空格文本用&nbsp;-->
+    <!--&; 之间可以反义-->
+    <div style="width:100px;height: 100px;background-color:red;">
+         &lt;div&gt; fasd
+        回
+        车
+        回<br> <!--br 不需要修饰其他东西，所以是单标签，不需要成对出现。img hr也是-->
+        车
+    </div>
+     <!--容器，划分功能，分块-->
+    <div>div</div> <!--容器可以捆绑操作，批量操作，不需要每一个元素单独操作-->
+
+
+    <!--ul 是父子结构，功能子项组成大功能，样式差不多，只是内容不同。导航栏-->
+    <ul type="circle">
+            <li>天猫</li>
+            <li>聚划算</li>
+            <li>天猫超市</li>
+    </ul>
+    <br>
+    <!--网上url，本地绝对地址， 本地相对地址-->
+    <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543150760&di=5e19f2db18dec1033fbca095ff4cb219&src=http://b-ssl.duitang.com/uploads/item/201504/01/20150401H1029_xsfhY.jpeg" style="width:200px" alt="hahah" title="这是提示信息"> 
+    <!--图片可能展示不出来，可以使用alt属性来表述，图片占位符-->
+
+    <!--a标签可以连接任何东西 a anchor 锚点的作用， 超链接作用， 打电话， 发邮件，协议限定符执行js脚本-->
+    <a href="https://www.baidu.com" target="_blank">www.baidu.com
+        <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543150760&di=5e19f2db18dec1033fbca095ff4cb219&src=http://b-ssl.duitang.com/uploads/item/201504/01/20150401H1029_xsfhY.jpeg" style="width:200px" alt="hahah" title="这是提示信息"> 
+    </a>
+    <a href="tel:15625178938">
+        打电话
+    </a>
+    <br>
+    <a href="javascript:alert('让你手欠')">点我试试</a>
+
+    <!--用于发送数据，表达出语义，可读性  lesson1.html?username=&password=-->
+    <form method="get" action="">
+        <p>username: <input type="text" name="username" value="请输入用户名"
+            style="color:#999"
+            onfocus="if(this.value=='请输入用户名'){ this.value=''; 
+            this.style.color='#424242'}" onblur="if(this.value==''){
+                this.value='请输入用户名';this.style.color='#999'
+            }"></p>
+        <p>password: <input type="password" name="password"></p>
+        <p><input type="submit"></p>
+    </form>
+    <!--单选框-->
+    <input type="radio" name="star"> 单选框1
+    <input type="radio" name="star"> 单选框2
+    <input type="radio" name="star"> 单选框3
+    <input type="submit">
+</body>
+</html>
