@@ -1,0 +1,21 @@
+/* id选择器 #id名字 */
+#divTest {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#only {
+    width: 100px;
+    background-color: red;
+}
+
+.demo {
+    width: 100px;
+    background-color: red;
+}
+
+.demo1 {
+    border-radius: 50%;
+}

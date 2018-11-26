@@ -2,6 +2,9 @@
 <head>
     <meta charset="utf-8">
     <title>淘宝网，我喜欢</title>
+    <!-- 引入css -->
+    <link rel="stylesheet" type="text/css" href="lesson.css">
+    <!-- 页面级css -->
     <style type="text/css">
         *{
             margin: 0;
@@ -86,5 +89,45 @@
     <input type="radio" name="star"> 单选框2
     <input type="radio" name="star"> 单选框3
     <input type="submit">
+
+    <br>
+    <!-- 复选框 -->
+    <input type="checkbox" name="star" value="1"> 单选框1
+    <input type="checkbox" name="star"> 单选框2
+    <input type="checkbox" name="star"> 单选框3
+    <input type="submit">
+
+    <br>
+
+    <!--选择框 -->
+    <form method="get" action="">
+        <h4>Province</h4>
+        <select name="province">
+            <option>beijing</option>
+            <option>shanghai</option>
+            <option>tianjing=</option>
+        </select>
+        <p><input type="submit"></p>
+    </form>
+
+    <!-- 结构 样式 行为 -->
+    <!-- css 就是装饰用的 cascading style sheet 层叠样式表 -->
+    <!-- 行间样式 -->
+    <div style="width:100px;height:100px;background-color: red"></div>
+
+    <!-- 页面级css -->
+
+    <!-- 引入css -->
+    <div id="divTest"></div>
+
+    <!-- id选择器 身份证-->
+    <div id="only">id选择器</div>
+    <!-- class 选择器 描述特点。class与css是多对多的 -->
+    <div class="demo">class选择器</div>
+    <div class="demo demo1">class选择器2</div>
+
+    <!-- 标签选择器 div span 作用全部的-->
+
+    <!-- 通配符 * any 所有的标签都有 body也是 -->
 </body>
 </html>
