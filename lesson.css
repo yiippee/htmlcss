@@ -19,3 +19,11 @@
 .demo1 {
     border-radius: 50%;
 }
+/* 父子选择器，只有div里面的span才会修饰 
+加了 >  表示直接子元素选择器
+不加 >  表示所有的子元素都作用
+*/
+div > span{
+    border-radius: 50%;
+    background-color: green;
+}
