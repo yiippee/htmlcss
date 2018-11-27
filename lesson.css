@@ -24,6 +24,22 @@
 不加 >  表示所有的子元素都作用
 */
 div > span{
-    border-radius: 50%;
-    background-color: green;
+    border-radius: 60%;
+    background-color: #ff4400;
+    border: 10px solid green ; /* 复合属性*/
+}
+#text {
+    padding: 10px;
+    text-align: left;
+    width: 50%;
+    text-indent: 2em;
+}
+
+#boxmode {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 10px solid;
+    padding: 100px;
 }
