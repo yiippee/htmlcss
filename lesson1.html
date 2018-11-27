@@ -34,6 +34,51 @@
     </style>
 </head>
 <body>
+    <!-- 编写一个五环 -->
+    <div class="plat">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+    </div>
+    <!-- 层模型 
+    1，absolute 脱离原来位置进行定位
+    已经不属于原来的层，则其他的层可覆盖它.
+    如果是在同一个层，则会将其他元素顶开。
+    相对于最近的有定位的父级，如果没有父级，则相对文档定位。
+
+    2，保留原来位置进行定位。原来的位置还在，其他元素不能覆盖。也是在不同的层。
+    相对于原来的位置进行定位。
+
+    用relative作为参照物，
+    再使用absolute进行定位。
+
+    一般让参考物设置为 relative
+    
+    3,fixed定位，不动。
+    {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+
+    4, z-index 代表是在哪一层，默认是 0 层。
+    -->
+    <!-- <div class="demo"></div>
+    <div class="box"></div> -->
+    <div>
+        123
+    </div>
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="box2">
+
+            </div>
+        </div>
+    </div>
+
     <h1> 标题 </h1>
     Life is shit!!!美好     生活。
     <del style="color:red">$100</del>
@@ -164,5 +209,7 @@
 
      <!-- 盒子模型 -->
      <div id="boxmode">123456789</div>
+
+     
 </body>
 </html>
