@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> 
+  </head>
+  <body style="width:1000px;margin:0 auto;">
+    <div style="width:100%;text-align:center;margin-top:50px;">
+      <h1>My Shop</h1>
+    </div>
+    <hr>
+    <div style="width:100%;text-align:center;">
+      <h3>All Teas</h3>
+    </div>
+    <div id="all_teas" style="width:100%;">
+
+    </div>
+    <div>
+      <form action="http://127.0.0.1:8080">
+        name:<input type="text" name="name">
+        <input type="submit" value="submit">
+      </form>
+    </div>
+    <button onclick="clicked()">clicked</button>
+    <script type="text/javascript">
+        function pong() {
+          console.log('pong...');
+        }
+        function clicked() {
+        // $(document).ready(function(){
+        // 使用jQuery的ajax来向服务器发送请求
+          console.log("here..");
+          $.ajax({
+            type: 'GET',
+            url: "http://127.0.0.1:8080/",
+            //dataType: 'jsonp',
+            success: function(data) {
+            // 当服务器返回给我们数据时，这些数据其实是存储在一个数组中的
+              var teas = data;
+
+              console.log("success...");
+              console.log("ret: ", data);
+              var str = JSON.stringify(data); // 先将obj转为json字符串
+              var obj = JSON.parse(str);      // 解析字符串
+              var html = '<div style="width:30px;height:50px;float:left;text-align:center;margin:10px 0;">'
+                  + obj.message + '</div>' + '<br>';
+              $('#all_teas').append(html);
+              // 我们要对这个数组teas进行遍历，找到每一个数据(value), key是每个数据在数组中的index
+              // $.each(teas, function(key, value){
+              //   var title = value.title;
+              //   var image = value.image;
+              //   var price = value.price;
+              //   // 通过javascript代码创建标签显示数据，然后append到html中
+              //   var html = '<div style="width:333px;height:300px;float:left;text-align:center;margin:10px 0;">'
+              //   + '<h1 style="margin:0;">' + title + '</h1>'
+              //   + '<img width="200" height="200" src="'+image+'">'
+              //   + '<p>价格：' + price + '</p>'
+              //   + '</div>';
+              //   $('#all_teas').append(html);
+              // });
+            }
+          });
+
+          // function success(text) {
+          //   var textdata = document.getElementById('all_teas');
+          //   textdata.nodeValue = text;
+          //   console.log(text);
+          //   var html = '<div style="width:333px;height:300px;float:left;text-align:center;margin:10px 0;">'
+          //       + '<h1 style="margin:0;">' + text + '</div>';
+          //   $('#all_teas').append(html);
+          // }
+
+          // var request = new XMLHttpRequest();
+          // request.onreadystatechange = function() {
+          //   // 判断响应结果:
+          //           // 失败，根据响应码判断失败原因:
+          //           console.log("status: ", request.status);
+          //           if (request.readyState  == 4) {
+          //              if (request.status == 200) {
+          //                success(request.responseText);
+          //              }
+          //           }
+
+          //   }
+          
+          // // 发送请求:
+          // request.open('GET', 'http://127.0.0.1:8080/');
+          // request.send();
+
+          //alert('请求已发送，请等待响应...');
+        }
+     //});
+    </script>
+  </body>
+</html>
