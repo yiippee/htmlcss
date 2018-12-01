@@ -1,0 +1,44 @@
+<html lang="zh">
+<head>
+    <style type="text/css">
+        .wrapper {
+            width: 320px;
+        }
+        .wrapper:hover {
+            width: 400px;
+        }
+
+        .imag {
+            width: 100px;
+            /* height: 100px; */
+            float: left;
+            margin-right: 10px;
+        }
+        .content1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 20px;
+            height: 40px;
+            overflow: hidden;
+        }
+        .content2 {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.2em;
+        }
+    </style>
+</head>
+<div class="wrapper">
+    <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543150760&di=5e19f2db18dec1033fbca095ff4cb219&src=http://b-ssl.duitang.com/uploads/item/201504/01/20150401H1029_xsfhY.jpeg" class="imag" style="width:200px" alt="hahah" title="这是提示信息"> 
+
+    <div class="content1"> 1,脱离原来位置进行定位
+        已经不属于原来的层，则其他的层可覆盖它.
+        如果是在同一个层，则会将其他元素顶开。
+        相对于最近的有定位的父级，如果没有父级，则相对文档定位。</div>
+
+    <div class="content2">2，保留原来位置进行定位。原来的位置还在，其他元素不能覆盖。也是在不同的层。
+        相对于原来的位置进行定位。</div>
+</div>
+
+</html>
